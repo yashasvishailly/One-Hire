@@ -2,6 +2,9 @@
 
 An AI hiring tool that qualifies and classifies candidates the way an experienced operator would, in a fraction of the time it takes by hand. It captures a batch of candidates from a search, judges each one against a role rubric with reasoning and evidence, drafts a personalized outreach note, and stops at an approval queue. A person approves. The tool does the reading, the judgment call, and the draft.
 
+Architecture: ./ARCHITECTURE.md
+Playbook, live: https://yashasvishailly.com/kits
+
 ## The judgment layer
 
 The core of One Hire is the qualification. For each candidate it decides fit as yes, no, or uncertain, attaches a confidence, and shows the evidence behind the call, the reason for an exclusion, and what evidence it's still missing. It surfaces its own uncertainty and flags when it might be hallucinating.
