@@ -19,6 +19,14 @@ Search results page, to a user triggered batch capture, to local intake, to prof
 
 candidate pool, needs profile evidence, enriched, drafted, withheld, human edited, rejected, ready to send.
 
+## Data and model boundary
+
+The local service holds intake, review, and audit data. If it uses a hosted model
+for qualification, selected candidate evidence leaves that service for the
+provider. The provider and its payload/retention configuration are not specified
+in this public case study. Offline rule mode makes no model-provider request.
+Human approval governs readiness for outreach, after classification and drafting.
+
 ## Safety boundary
 
 - No automatic login, navigation, scrolling, or bulk profile opening

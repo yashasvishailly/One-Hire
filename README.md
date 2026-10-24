@@ -21,11 +21,11 @@ This is the part a recruiter does in their head over hours of reading. One Hire 
 
 ## Design principles
 
-- **Human approval before anything leaves the queue.**
+- **Human approval before a candidate is marked ready for outreach.**
 - **Evidence on every call.** Each fit decision carries the evidence it used and flags what it's missing.
 - **No dark pattern automation.** No auto login, no auto navigation, no bulk sending, no scraping of contact details, and no gender inference from names or photos.
 - **Auditable.** Every state change is logged with a timestamp.
-- **Local first.** Profile data stays local during a run.
+- **Local intake and review.** The local service stores profiles and review history. When qualification uses a hosted model, candidate evidence is sent to that provider; local storage does not make that inference local.
 
 ## Stack
 
@@ -41,3 +41,11 @@ A case study and the system architecture. See `ARCHITECTURE.md`. One Hire is a p
 ## Who built it
 
 Yashasvi Shailly. Designed and built solo.
+
+## Model-provider boundary
+
+This public case study does not identify the configured provider, endpoint, or
+retention settings. It cannot establish that a live run keeps all profile data on
+the device. The offline rule mode supports development without a model call. A
+hosted qualification run sends its selected evidence to the configured provider
+before a person reviews the result; outreach approval is a separate step.
